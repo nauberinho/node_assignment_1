@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title= title
+        link(href='main.css', rel='stylesheet')
+        script(src="https://code.jquery.com/jquery-1.11.1.js")
+        script(src="/socket.io/socket.io.js")
+        script(src="https://d3js.org/d3.v4.min.js")
+
+
+
+    body
+
+        svg(style={
+            'width': '100vw',
+            'height': '80vh',
+            'margin': 'auto',
+            'border': '2px solid lightgrey'})
+                 div(class='val-info-div') INFO
+                     div(class='parti-info-div') PARTIINFO
+
+        a(href='/vote') Vote
+
+
+
+
+
+
+
+        script
+            include ../socketHandler.js
+

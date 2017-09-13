@@ -1,0 +1,32 @@
+//
+   Created by nauber on 2017-09-07.
+
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet' href='main.css')
+        script(src="https://code.jquery.com/jquery-1.11.1.js")
+        script(src="/socket.io/socket.io.js")
+        script(src="https://d3js.org/d3.v4.min.js")
+
+
+
+
+    body
+        ul(id="messages")
+
+        form(id="form" action="")
+            select(id="send")
+                option(value="volvo") Volvo
+                option(value="saab") Saab
+                option(value="mercedes") Mercedes
+                option(value="audi") Audi
+
+    button(id="submit") Send
+
+    a(href="/result") Result
+
+        script
+            include ../socketHandler.js
+

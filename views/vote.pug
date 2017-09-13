@@ -1,0 +1,48 @@
+doctype html
+html
+    head
+        title= title
+        link(href='main.css', rel='stylesheet')
+        script(src="https://code.jquery.com/jquery-1.11.1.js")
+        script(src="/socket.io/socket.io.js")
+        script(src="https://d3js.org/d3.v4.min.js")
+
+
+
+
+
+    body
+        ul(id="messages")
+
+        form(class="form" action="")
+            select(id="parti")
+                option(value="socialdemokraterna") Socialdemokraterna
+                option(value="centerpartiet") Centerpartiet
+                option(value="sverigedemokraterna") Sverigedemokraterna
+                option(value="oppnakyrkan") Öppna Kyrkan
+
+        form(class="form" action="")
+            select(id="vallokal")
+                option(value="vasakyrkan") Vasakyrkan
+                option(value="masthugsskyrkan") Masthugsskyrkan
+                option(value="kortedalakyrkan") Kortedalakyrkan
+                option(value="gardstenskyrkan") Gardstenskyrkan
+
+        form(class="form" action="")
+            select(id="votes")
+                option(value=10) 10
+                option(value=50) 50
+                option(value=100) 100
+                option(value=1000) 1000
+                option(value=2000) 2000
+                option(value=4000) 4000
+                option(value=8000) 8000
+
+        button(id="submit") Send
+
+        a(href="/result") Result
+
+        script
+            include ../socketHandler.js
+
+
