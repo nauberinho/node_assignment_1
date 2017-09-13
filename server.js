@@ -1,7 +1,7 @@
 /**
  * Created by naube on 2017-09-07.
  */
-
+var express = require('express');
 var app = require('express')();
 var d3 = require('d3');
 
@@ -13,6 +13,7 @@ var http = require('http');
 const pug = require('pug');
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
 
 
 //ROUTES
