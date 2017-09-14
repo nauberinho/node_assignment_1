@@ -3,8 +3,7 @@ html
     head
         title= title
         link(href='/main.css', rel='stylesheet')
-        style
-            include 'css/main.css'
+        link(href="https://fonts.googleapis.com/css?family=Share+Tech+Mono", rel="stylesheet")
         script(src="https://code.jquery.com/jquery-1.11.1.js")
         script(src="/socket.io/socket.io.js")
         script(src="https://d3js.org/d3.v4.min.js")
@@ -14,35 +13,41 @@ html
 
 
     body
-        ul(id="messages")
+
 
         form(class="form" action="")
+            div Välj parti
             select(id="parti")
-                option(value="socialdemokraterna") Socialdemokraterna
-                option(value="centerpartiet") Centerpartiet
-                option(value="sverigedemokraterna") Sverigedemokraterna
-                option(value="oppnakyrkan") Öppna Kyrkan
+                option(class="option" value="socialdemokraterna") Socialdemokraterna
+                option(class="option" value="centerpartiet") Centerpartiet
+                option(class="option" value="sverigedemokraterna") Sverigedemokraterna
+                option(class="option" value="oppnakyrkan") Öppna Kyrkan
 
         form(class="form" action="")
+            div Välj din vallokal
             select(id="vallokal")
-                option(value="vasakyrkan") Vasakyrkan
-                option(value="masthugsskyrkan") Masthugsskyrkan
-                option(value="kortedalakyrkan") Kortedalakyrkan
-                option(value="gardstenskyrkan") Gardstenskyrkan
+                option(class="option" value="vasakyrkan") Vasakyrkan
+                option(class="option" value="masthuggskyrkan") Masthuggskyrkan
+                option(class="option" value="kortedalakyrkan") Kortedalakyrkan
+                option(class="option" value="gardstenskyrkan") Gardstenskyrkan
 
         form(class="form" action="")
+            div Välj antal röster
             select(id="votes")
-                option(value=10) 10
-                option(value=50) 50
-                option(value=100) 100
-                option(value=1000) 1000
-                option(value=2000) 2000
-                option(value=4000) 4000
-                option(value=8000) 8000
+                option(class="option" value=10) 10
+                option(class="option" value=50) 50
+                option(class="option" value=100) 100
+                option(class="option" value=1000) 1000
+                option(class="option" value=2000) 2000
+                option(class="option" value=4000) 4000
+                option(class="option" value=8000) 8000
 
-        button(id="submit") Send
+        div(class="send-and-result-div")
+            button(id="submit") Send
+            a(class='change-href' href='/result' id='result') Result
 
-        a(href="/result") Result
+
+
 
         script
             include ../socketHandler.js
