@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "d3": "^4.10.2",
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "nodemon": "^1.12.0",
     "pug": "^2.0.0-rc.4",
     "socket.io": "^2.0.3"
